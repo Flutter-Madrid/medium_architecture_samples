@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+
+import 'package:flutter_mvvm/locator.dart';
+import 'package:flutter_mvvm/core/models/login_form.dart';
 import 'package:flutter_mvvm/core/services/navigation_service.dart';
 import 'package:flutter_mvvm/core/shared/utils.dart';
-import 'package:flutter_mvvm/locator.dart';
 import 'package:flutter_mvvm/ui/home/home.dart';
 
 class LoginPageModel extends ChangeNotifier {
-  String email;
-  String password;
+  LoginForm _loginForm = new LoginForm();
+
+  String get email => _loginForm.email;
+  String get password => _loginForm.password;
 
   String errorMessageEmail;
   String errorMessagePassword;
@@ -45,10 +49,10 @@ class LoginPageModel extends ChangeNotifier {
   }
 
   savePassword(String value) {
-    password = value;
+    _loginForm.password = value;
   }
 
   saveEmail(String value) {
-    email = value;
+    _loginForm.email = value;
   }
 }

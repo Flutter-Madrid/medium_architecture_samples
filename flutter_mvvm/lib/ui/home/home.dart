@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/ui/widgets/todo_item.dart';
 import 'package:provider/provider.dart';
 
 import 'package:flutter_mvvm/locator.dart';
-import 'package:flutter_mvvm/core/viewmodels/home_model.dart';
+import 'package:flutter_mvvm/core/viewmodels/home_page_model.dart';
+import 'package:flutter_mvvm/ui/widgets/todo_item.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = '/home';
@@ -52,10 +52,12 @@ class _HomePageState extends State<HomePage> {
                               model.removeTodo(model.todos[index]);
                             },
                             child: TodoItem(
-                                todo: model.todos[index],
-                                onTap: () {
-                                  model.toggleTodo(model.todos[index]);
-                                }),
+                              title: model.todos[index].title,
+                              completed: model.todos[index].completed,
+                              onTap: () {
+                                model.toggleTodo(model.todos[index]);
+                              },
+                            ),
                           );
                         },
                       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/core/models/todo.dart';
-import 'package:flutter_mvvm/locator.dart';
 
+import 'package:flutter_mvvm/locator.dart';
+import 'package:flutter_mvvm/core/models/todo.dart';
 import 'package:flutter_mvvm/core/services/todos_service.dart';
 
 class HomePageModel extends ChangeNotifier {

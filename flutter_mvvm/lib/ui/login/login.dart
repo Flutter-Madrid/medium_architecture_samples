@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/core/viewmodels/login_model.dart';
-import 'package:flutter_mvvm/locator.dart';
 import 'package:provider/provider.dart';
+
+import 'package:flutter_mvvm/core/viewmodels/login_page_model.dart';
+import 'package:flutter_mvvm/locator.dart';
 
 class LoginPage extends StatelessWidget {
   static const String routeName = '/login';
@@ -24,6 +25,11 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Text('Iniciar sesión',
+                      style: Theme.of(context).textTheme.headline4),
+                  SizedBox(
+                    height: 32,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Email',
@@ -49,7 +55,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   RaisedButton(
                     onPressed: model.validate,
-                    child: Text('Iniciar sesión'),
+                    child: Text('Inicia sesión'),
                   )
                 ],
               ),
