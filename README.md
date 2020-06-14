@@ -4,7 +4,7 @@ En este repositorio tendremos el código de los artículos escritos en la [comun
 
 ---
 
-### MVVM: Model-View-ViewModel
+### **MVVM** Model-View-ViewModel
 
-* [Post de medium](https://medium.com/flutter-madrid/arquitecturas-y-patrones-de-dise%C3%B1o-en-flutter-cap%C3%ADtulo-1-mvvm-591ad3d63bb)
+* [Post de Medium](https://medium.com/flutter-madrid/arquitecturas-y-patrones-de-dise%C3%B1o-en-flutter-cap%C3%ADtulo-1-mvvm-591ad3d63bb)
 * [Código](https://github.com/Flutter-Madrid/medium_architecture_samples/tree/master/flutter_mvvm) 
